@@ -14,7 +14,7 @@
 - [Section 7 - SQL Fundamentals - Restricting and ordering data](#section-7-sql-fundamentals-restricting-and-ordering-data)
    * [clause where](#clause-where)
 - [Section 8 - Single -Row Functions](#section-8-single-row-functions)
-   * [Data Functions](#data-functions)
+   * [Date Functions](#date-functions)
    * [Single-Row Functions 2](#single-row-functions-2)
    * [Single-Row Functions](#single-row-functions)
 - [Section 9 - Conversion Functions](#section-9-conversion-functions)
@@ -1848,7 +1848,7 @@ Select * From Employees and Where E.JOB_ID = '& Job_id';
 ## Section 8 - Single -Row Functions
 
 <!-- TOC --><a name="data-functions"></a>
-### Data Functions
+### Date Functions
 
 ```sql
 - Functions for the Date Type
