@@ -1973,7 +1973,7 @@ SELECT LOWER ('SQL Specialist') from Dual;
 SELECT INITCAP ('SQL Specialist') from dual;
 SELECT CONCAT ('SQL Specialist', 2022) from dual;
 Select Substr ('SQL Specialist', 1, 3) from dual;
-SELECT LETTH ('SQL Specialist') from Dual;
+SELECT LENGTH ('SQL Specialist') from Dual;
 SELECT INTR ('SQL Specialist', 'Specialist') from Dual;
 SELECT LPAD ('SQL Specialist', 20, '*') from dual;
 SELECT RPAD ('SQL Specialist', 20, '*') from dual;
