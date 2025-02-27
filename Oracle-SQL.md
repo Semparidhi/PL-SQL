@@ -2506,7 +2506,8 @@ Order by D.Department_id;
 ---
 
 <!-- TOC --><a name="5-cartesian-product"></a>
-### 5 - Cartesian product or Cross Join
+### 5 - Cartesian product 
+ #### This also called as cross join. The of rows returned is equal to no.of.rows in left table a * no.of.rows in right table 
 
 ```sql
 -
