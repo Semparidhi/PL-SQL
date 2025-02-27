@@ -2467,9 +2467,10 @@ From Employees and
   Join Department D Using (Department_id);
 ```
 ---
-
+#### Left joins = > Inner join + other non matching values in the left table
+#### Right joins = > Inner join + other non matching values in the Right table
 <!-- TOC --><a name="4-outer-joins"></a>
-### 4 - Outer Joins
+### 4 - Outer Joins => Inner Join + non matching in left table + non matching value in right table
 
 ```sql
 -
