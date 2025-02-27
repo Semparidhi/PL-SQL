@@ -2506,7 +2506,7 @@ Order by D.Department_id;
 ---
 
 <!-- TOC --><a name="5-cartesian-product"></a>
-### 5 - Cartesian product
+### 5 - Cartesian product or Cross Join
 
 ```sql
 -
