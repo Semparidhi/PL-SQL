@@ -1,6 +1,124 @@
+<!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
+
+- [Section 5 - Block Anonymous](#section-5-block-anonymous)
+   * [Block Anonymous.SQL](#block-anonymoussql)
+- [Section 6 - Variables e Constant](#section-6-variables-e-constant)
+   * [1 - Defining Identifiers – Variables.sql](#1-defining-identifiers-variablessql)
+   * [2 - Defining Identifiers - Constantibus.sql](#2-defining-identifiers-constantibussql)
+   * [3 - Types of Data no PLSQL - Datatypes.sql](#3-types-of-data-no-plsql-datatypessql)
+   * [4 - Variable Bind.sql](#4-variable-bindsql)
+   * [Variables e identifiers.sql](#variables-e-identifierssql)
+- [Section 7 - Syntax e guidelines](#section-7-syntax-e-guidelines)
+   * [1 - Syntax e Guidelines of one Block PLSQL.sql](#1-syntax-e-guidelines-of-one-block-plsqlsql)
+   * [2 - Using Duties no block PLSQL.sql](#2-using-duties-no-block-plsqlsql)
+   * [3 - Blocks Nestled e Scope of Identifiers.sql](#3-blocks-nestled-e-scope-of-identifierssql)
+   * [4 - Standard of codification Suggested](#4-standard-of-codification-suggested)
+- [Section 8 - Commands SQL no PLSQL](#section-8-commands-sql-no-plsql)
+   * [1 - Using o command SELECT no PLSQL.sql](#1-using-o-command-select-no-plsqlsql)
+   * [2 - Using o command INSERT no PLSQL.sql](#2-using-o-command-insert-no-plsqlsql)
+   * [3 - Using o command UPDATE no PLSQL.sql](#3-using-o-command-update-no-plsqlsql)
+   * [4 - Using o command DELETE no PLSQL.sql](#4-using-o-command-delete-no-plsqlsql)
+   * [5 - Controlling Transactions of banco of data no PLSQL.sql](#5-controlling-transactions-of-banco-of-data-no-plsqlsql)
+   * [6 - Cursor implicit.SQL](#6-cursor-implicitsql)
+   * [ROWCOUNT.sql](#rowcountsql)
+   * [SELECT INTO PLSQL.sql](#select-into-plsqlsql)
+- [Section 9 - Structures of control](#section-9-structures-of-control)
+   * [1 - Rule of precedence.sql](#1-rule-of-precedencesql)
+   * [2 - IF THEN ELSIF ELSE.sql](#2-if-then-elsif-elsesql)
+   * [3 - CASE.sql](#3-casesql)
+   * [4 - LOOP.sql](#4-loopsql)
+   * [5 - FOR LOOP.sql](#5-for-loopsql)
+   * [6 - WHILE LOOP.sql](#6-while-loopsql)
+   * [7 - LOOPs Anninhados.sql](#7-loops-anninhadossql)
+   * [CASE.sql](#casesql)
+   * [IF THEN ELSIF ELSE.sql](#if-then-elsif-elsesql)
+   * [LOOPs.sql](#loopssql)
+- [Section 10 - RECORD TYPE](#section-10-record-type)
+   * [1 - RECORD TYPE.sql](#1-record-typesql)
+   * [2 - RECORD ROWTYPE.sql](#2-record-rowtypesql)
+- [Section 11 - Collections](#section-11-collections)
+   * [1 - Associative arrays.sql](#1-associative-arrayssql)
+   * [2 - Associative arays of RECORD.sql](#2-associative-arays-of-recordsql)
+   * [3 - Nested table.sql](#3-nested-tablesql)
+   * [4 - Nested table of RECORD.sql](#4-nested-table-of-recordsql)
+   * [5 - VARRAY.sql](#5-varraysql)
+   * [6 - VARRAY of RECORD.sql](#6-varray-of-recordsql)
+   * [Associative array of RECORD.sql](#associative-array-of-recordsql)
+   * [Associative array.sql](#associative-arraysql)
+- [Section 12 - Cursor Explicit](#section-12-cursor-explicit)
+   * [1 - Controlling cursor explicit.sql](#1-controlling-cursor-explicitsql)
+   * [2 - Cursor FOR LOOP.sql](#2-cursor-for-loopsql)
+   * [3 - Cursor com parameters.sql](#3-cursor-com-parameterssql)
+   * [4 - SELECR FOR UPDATE.sql](#4-selecr-for-updatesql)
+   * [Cursor com FOR LOOP.sql](#cursor-com-for-loopsql)
+   * [Cursor com WHILE.sql](#cursor-com-whilesql)
+   * [Cursor explicit.sql](#cursor-explicitsql)
+- [Section 13 - EXCEPTIONS](#section-13-exceptions)
+   * [1 - EXCEPTIONS.sql](#1-exceptionssql)
+   * [2 - EXCEPTIONS defined.sql](#2-exceptions-definedsql)
+   * [3 - PRAGMA EXCEPTION_INIT.sql](#3-pragma-exception_initsql)
+- [Section 14 - Procedures](#section-14-procedures)
+   * [1 - Creating one procedure.sql](#1-creating-one-proceduresql)
+   * [2 - Parameters IN.sql](#2-parameters-insql)
+   * [3 - Parameters IN OUT.sql](#3-parameters-in-outsql)
+   * [4 - Ticket of parameters.sql](#4-ticket-of-parameterssql)
+   * [5 - By collecting one procedure.sql](#5-by-collecting-one-proceduresql)
+   * [6 - Removing one procedure.sql](#6-removing-one-proceduresql)
+   * [Call_prc_consulta_tregado.sql](#call_prc_consulta_tregadosql)
+   * [Call_prc_insere_tregado.sql](#call_prc_insere_tregadosql)
+- [Section 15 - Functions](#section-15-functions)
+   * [1 - Creating one function.sql](#1-creating-one-functionsql)
+   * [2 - Function em command SQL.sql](#2-function-em-command-sqlsql)
+   * [3 - By collecting one function.sql](#3-by-collecting-one-functionsql)
+   * [4 - Removing uma function.sql](#4-removing-uma-functionsql)
+   * [Call FNC_Consulta_salario_empregado.sql](#call-fnc_consulta_salario_empregadosql)
+   * [Query SQL com FUNCTION.sql](#query-sql-com-functionsql)
+- [Section 16 - Managing procedures e functions](#section-16-managing-procedures-e-functions)
+   * [1 - Managing procedures e functions.sql](#1-managing-procedures-e-functionssql)
+   * [objects-views.sql](#objects-viewssql)
+- [Section 17 - Managing dependencies of objects](#section-17-managing-dependencies-of-objects)
+   * [1 - Managing dependencies of objetos.sql](#1-managing-dependencies-of-objetossql)
+   * [2 - DEPTREE e IDEPTREE.sql](#2-deptree-e-ideptreesql)
+- [Section 18 - Packages](#section-18-packages)
+   * [1 - Creating a package specification.sql](#1-creating-a-package-specificationsql)
+   * [2 - Creating o package body.sql](#2-creating-o-package-bodysql)
+   * [3 - Reference Components of one package.sql](#3-reference-components-of-one-packagesql)
+   * [4 - Procedure of one unique execution na session & debuger.sql](#4-procedure-of-one-unique-execution-na-session-debugersql)
+   * [CALL PKG e FUNCTION.sql](#call-pkg-e-functionsql)
+- [Section 19 - SYS_REFCURSOR](#section-19-sys_refcursor)
+   * [1 - SYS_REFCURSOR.sql](#1-sys_refcursorsql)
+- [Section 20 - BULK COLLECT](#section-20-bulk-collect)
+   * [1 - ASSOCIATIVE ARRAY.sql](#1-associative-arraysql)
+   * [2 - NESTED TABLE.sql](#2-nested-tablesql)
+   * [3 - VARRAY.sql](#3-varraysql)
+- [Section 21 - FORALL e LIMIT](#section-21-forall-e-limit)
+   * [1 - FORALL.sql](#1-forallsql)
+   * [2 - LIMIT.sql](#2-limitsql)
+- [Section 22 - SQL Dynamic](#section-22-sql-dynamic)
+   * [1 - EXECUTE IMMEDIATE.sql](#1-execute-immediatesql)
+   * [2 - EXECUTE IMMEDIATE with BIND VARIABLES.sql](#2-execute-immediate-with-bind-variablessql)
+   * [Invoking Subprogram from Dynamic SQL Block.sql](#invoking-subprogram-from-dynamic-sql-blocksql)
+- [Section 23 - DBMS_SQL](#section-23-dbms_sql)
+   * [1 - DBMS_SQL.sql](#1-dbms_sqlsql)
+- [Section 24 - Cursor com SQL Dynamic](#section-24-cursor-com-sql-dynamic)
+   * [1 - Cursor Explicit com SQL Dynamic.sql](#1-cursor-explicit-com-sql-dynamicsql)
+- [Section 25 - DBMS_SCHEDULER](#section-25-dbms_scheduler)
+   * [1 - Creating one Programa.sql](#1-creating-one-programasql)
+   * [2 - Creating one Agenda.sql](#2-creating-one-agendasql)
+   * [3 - Creating one Job.sql](#3-creating-one-jobsql)
+- [Section 26 - UTL_FILE](#section-26-utl_file)
+   * [1 - UTL_FILE.sql](#1-utl_filesql)
+   * [Using a Package UTL_FILE to ler e to record files.sql](#using-a-package-utl_file-to-ler-e-to-record-filessql)
+- [Section 27 - DBMS_FLASHBACK](#section-27-dbms_flashback)
+   * [FLASHBACK query.sql](#flashback-querysql)
+
+<!-- TOC end -->
+
+<!-- TOC --><a name="section-5-block-anonymous"></a>
 # Section 5 - Block Anonymous
 
 
+<!-- TOC --><a name="block-anonymoussql"></a>
 ## Block Anonymous.SQL
 ```sql
 --
@@ -26,9 +144,11 @@ EXCEPTION
 END;
 ```
 
+<!-- TOC --><a name="section-6-variables-e-constant"></a>
 # Section 6 - Variables e Constant
 
 
+<!-- TOC --><a name="1-defining-identifiers-variablessql"></a>
 ## 1 - Defining Identifiers – Variables.sql
 ```sql
 --
@@ -75,6 +195,7 @@ BEGIN
 END;
 ```
 
+<!-- TOC --><a name="2-defining-identifiers-constantibussql"></a>
 ## 2 - Defining Identifiers - Constantibus.sql
 ```sql
 --
@@ -121,6 +242,7 @@ BEGIN
 END;
 ```
 
+<!-- TOC --><a name="3-types-of-data-no-plsql-datatypessql"></a>
 ## 3 - Types of Data no PLSQL - Datatypes.sql
 ```sql
 --
@@ -174,6 +296,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="4-variable-bindsql"></a>
 ## 4 - Variable Bind.sql
 ```sql
 --
@@ -202,6 +325,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="variables-e-identifierssql"></a>
 ## Variables e identifiers.sql
 ```sql
 DECLARE
@@ -237,9 +361,11 @@ END;
 
 ```
 
+<!-- TOC --><a name="section-7-syntax-e-guidelines"></a>
 # Section 7 - Syntax e guidelines
 
 
+<!-- TOC --><a name="1-syntax-e-guidelines-of-one-block-plsqlsql"></a>
 ## 1 - Syntax e Guidelines of one Block PLSQL.sql
 ```sql
 --
@@ -272,6 +398,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="2-using-duties-no-block-plsqlsql"></a>
 ## 2 - Using Duties no block PLSQL.sql
 ```sql
 --
@@ -307,6 +434,7 @@ BEGIN
 END;
 ```
 
+<!-- TOC --><a name="3-blocks-nestled-e-scope-of-identifierssql"></a>
 ## 3 - Blocks Nestled e Scope of Identifiers.sql
 ```sql
 --
@@ -354,6 +482,7 @@ BEGIN
 END;
 ```
 
+<!-- TOC --><a name="4-standard-of-codification-suggested"></a>
 ## 4 - Standard of codification Suggested
 ```sql
 --
@@ -383,9 +512,11 @@ END;
 
 ```
 
+<!-- TOC --><a name="section-8-commands-sql-no-plsql"></a>
 # Section 8 - Commands SQL no PLSQL
 
 
+<!-- TOC --><a name="1-using-o-command-select-no-plsqlsql"></a>
 ## 1 - Using o command SELECT no PLSQL.sql
 ```sql
 --
@@ -465,6 +596,7 @@ BEGIN
 END;
 ```
 
+<!-- TOC --><a name="2-using-o-command-insert-no-plsqlsql"></a>
 ## 2 - Using o command INSERT no PLSQL.sql
 ```sql
 --
@@ -493,6 +625,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="3-using-o-command-update-no-plsqlsql"></a>
 ## 3 - Using o command UPDATE no PLSQL.sql
 ```sql
 --
@@ -517,6 +650,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="4-using-o-command-delete-no-plsqlsql"></a>
 ## 4 - Using o command DELETE no PLSQL.sql
 ```sql
 ---
@@ -540,6 +674,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="5-controlling-transactions-of-banco-of-data-no-plsqlsql"></a>
 ## 5 - Controlling Transactions of banco of data no PLSQL.sql
 ```sql
 ---
@@ -592,6 +727,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="6-cursor-implicitsql"></a>
 ## 6 - Cursor implicit.SQL
 ```sql
 ---
@@ -617,6 +753,7 @@ END;
 ROLLBACK;
 ```
 
+<!-- TOC --><a name="rowcountsql"></a>
 ## ROWCOUNT.sql
 ```sql
 DECLARE
@@ -633,6 +770,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="select-into-plsqlsql"></a>
 ## SELECT INTO PLSQL.sql
 ```sql
 DECLARE
@@ -661,9 +799,11 @@ END;
 
 ```
 
+<!-- TOC --><a name="section-9-structures-of-control"></a>
 # Section 9 - Structures of control
 
 
+<!-- TOC --><a name="1-rule-of-precedencesql"></a>
 ## 1 - Rule of precedence.sql
 ```sql
 --
@@ -705,6 +845,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="2-if-then-elsif-elsesql"></a>
 ## 2 - IF THEN ELSIF ELSE.sql
 ```sql
 --
@@ -778,6 +919,7 @@ BEGIN
 END;
 ```
 
+<!-- TOC --><a name="3-casesql"></a>
 ## 3 - CASE.sql
 ```sql
 --
@@ -845,6 +987,7 @@ BEGIN
  END;
 ```
 
+<!-- TOC --><a name="4-loopsql"></a>
 ## 4 - LOOP.sql
 ```sql
 --
@@ -872,6 +1015,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="5-for-loopsql"></a>
 ## 5 - FOR LOOP.sql
 ```sql
 --
@@ -895,6 +1039,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="6-while-loopsql"></a>
 ## 6 - WHILE LOOP.sql
 ```sql
 -- Seção 9 - Estruturas de Controle 
@@ -920,6 +1065,7 @@ END LOOP;
 END;
 ```
 
+<!-- TOC --><a name="7-loops-anninhadossql"></a>
 ## 7 - LOOPs Anninhados.sql
 ```sql
 --
@@ -1024,6 +1170,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="casesql"></a>
 ## CASE.sql
 ```sql
 DECLARE
@@ -1053,6 +1200,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="if-then-elsif-elsesql"></a>
 ## IF THEN ELSIF ELSE.sql
 ```sql
 rem PL/SQL Developer Test Script
@@ -1097,6 +1245,7 @@ print vNota1
 
 ```
 
+<!-- TOC --><a name="loopssql"></a>
 ## LOOPs.sql
 ```sql
 DECLARE
@@ -1132,9 +1281,11 @@ END;
 
 ```
 
+<!-- TOC --><a name="section-10-record-type"></a>
 # Section 10 - RECORD TYPE
 
 
+<!-- TOC --><a name="1-record-typesql"></a>
 ## 1 - RECORD TYPE.sql
 ```sql
 --
@@ -1172,6 +1323,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="2-record-rowtypesql"></a>
 ## 2 - RECORD ROWTYPE.sql
 ```sql
 --
@@ -1201,9 +1353,11 @@ DBMS_OUTPUT.PUT_LINE(employee_record.employee_id || ' - ' ||
 END;
 ```
 
+<!-- TOC --><a name="section-11-collections"></a>
 # Section 11 - Collections
 
 
+<!-- TOC --><a name="1-associative-arrayssql"></a>
 ## 1 - Associative arrays.sql
 ```sql
 --
@@ -1237,6 +1391,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="2-associative-arays-of-recordsql"></a>
 ## 2 - Associative arays of RECORD.sql
 ```sql
 --
@@ -1270,6 +1425,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="3-nested-tablesql"></a>
 ## 3 - Nested table.sql
 ```sql
 --
@@ -1304,6 +1460,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="4-nested-table-of-recordsql"></a>
 ## 4 - Nested table of RECORD.sql
 ```sql
 --
@@ -1335,6 +1492,7 @@ BEGIN
 END;
 ```
 
+<!-- TOC --><a name="5-varraysql"></a>
 ## 5 - VARRAY.sql
 ```sql
 --
@@ -1364,6 +1522,7 @@ BEGIN
 END;
 ```
 
+<!-- TOC --><a name="6-varray-of-recordsql"></a>
 ## 6 - VARRAY of RECORD.sql
 ```sql
 --
@@ -1395,6 +1554,7 @@ BEGIN
 END;
 ```
 
+<!-- TOC --><a name="associative-array-of-recordsql"></a>
 ## Associative array of RECORD.sql
 ```sql
 DECLARE
@@ -1412,6 +1572,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="associative-arraysql"></a>
 ## Associative array.sql
 ```sql
 DECLARE
@@ -1431,9 +1592,11 @@ END;
 
 ```
 
+<!-- TOC --><a name="section-12-cursor-explicit"></a>
 # Section 12 - Cursor Explicit
 
 
+<!-- TOC --><a name="1-controlling-cursor-explicitsql"></a>
 ## 1 - Controlling cursor explicit.sql
 ```sql
 --
@@ -1516,6 +1679,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="2-cursor-for-loopsql"></a>
 ## 2 - Cursor FOR LOOP.sql
 ```sql
 --
@@ -1568,6 +1732,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="3-cursor-com-parameterssql"></a>
 ## 3 - Cursor com parameters.sql
 ```sql
 --
@@ -1607,6 +1772,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="4-selecr-for-updatesql"></a>
 ## 4 - SELECR FOR UPDATE.sql
 ```sql
 --
@@ -1641,6 +1807,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="cursor-com-for-loopsql"></a>
 ## Cursor com FOR LOOP.sql
 ```sql
 DECLARE
@@ -1660,6 +1827,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="cursor-com-whilesql"></a>
 ## Cursor com WHILE.sql
 ```sql
 DECLARE
@@ -1693,6 +1861,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="cursor-explicitsql"></a>
 ## Cursor explicit.sql
 ```sql
 DECLARE
@@ -1725,9 +1894,11 @@ END;
 
 ```
 
+<!-- TOC --><a name="section-13-exceptions"></a>
 # Section 13 - EXCEPTIONS
 
 
+<!-- TOC --><a name="1-exceptionssql"></a>
 ## 1 - EXCEPTIONS.sql
 ```sql
 --
@@ -1769,6 +1940,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="2-exceptions-definedsql"></a>
 ## 2 - EXCEPTIONS defined.sql
 ```sql
 --
@@ -1817,6 +1989,7 @@ EXCEPTION
 END;
 ```
 
+<!-- TOC --><a name="3-pragma-exception_initsql"></a>
 ## 3 - PRAGMA EXCEPTION_INIT.sql
 ```sql
 --
@@ -1856,9 +2029,11 @@ END;
    VALUES (employees_seq.nextval, 'Joseph', 'Smith', '3333333', 'JSMITH', sysdate, 'ZZZZ_XX');
 ```
 
+<!-- TOC --><a name="section-14-procedures"></a>
 # Section 14 - Procedures
 
 
+<!-- TOC --><a name="1-creating-one-proceduresql"></a>
 ## 1 - Creating one procedure.sql
 ```sql
 --
@@ -1942,6 +2117,7 @@ WHERE  first_name = 'Greg' AND
 
 ```
 
+<!-- TOC --><a name="2-parameters-insql"></a>
 ## 2 - Parameters IN.sql
 ```sql
 --
@@ -1978,6 +2154,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="3-parameters-in-outsql"></a>
 ## 3 - Parameters IN OUT.sql
 ```sql
 --
@@ -2122,6 +2299,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="4-ticket-of-parameterssql"></a>
 ## 4 - Ticket of parameters.sql
 ```sql
 --
@@ -2198,6 +2376,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="5-by-collecting-one-proceduresql"></a>
 ## 5 - By collecting one procedure.sql
 ```sql
 --
@@ -2218,6 +2397,7 @@ ALTER PROCEDURE PRC_INSERE_EMPREGADO COMPILE;
 
 ```
 
+<!-- TOC --><a name="6-removing-one-proceduresql"></a>
 ## 6 - Removing one procedure.sql
 ```sql
 ---
@@ -2280,6 +2460,7 @@ EXCEPTION
 END;
 ```
 
+<!-- TOC --><a name="call_prc_consulta_tregadosql"></a>
 ## Call_prc_consulta_tregado.sql
 ```sql
 DECLARE
@@ -2304,6 +2485,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="call_prc_insere_tregadosql"></a>
 ## Call_prc_insere_tregado.sql
 ```sql
 BEGIN
@@ -2335,9 +2517,11 @@ END;
 
 ```
 
+<!-- TOC --><a name="section-15-functions"></a>
 # Section 15 - Functions
 
 
+<!-- TOC --><a name="1-creating-one-functionsql"></a>
 ## 1 - Creating one function.sql
 ```sql
 --
@@ -2380,6 +2564,7 @@ BEGIN
 END;
 ```
 
+<!-- TOC --><a name="2-function-em-command-sqlsql"></a>
 ## 2 - Function em command SQL.sql
 ```sql
 --
@@ -2424,6 +2609,7 @@ SELECT FNC_CONSULTA_SALARIO_EMPREGADO(130)
 FROM   dual;
 ```
 
+<!-- TOC --><a name="3-by-collecting-one-functionsql"></a>
 ## 3 - By collecting one function.sql
 ```sql
 --
@@ -2439,6 +2625,7 @@ ALTER FUNCTION FNC_CONSULTA_SALARIO_EMPREGADO COMPILE;
 
 ```
 
+<!-- TOC --><a name="4-removing-uma-functionsql"></a>
 ## 4 - Removing uma function.sql
 ```sql
 --
@@ -2453,6 +2640,7 @@ DROP FUNCTION FNC_CONSULTA_SALARIO_EMPREGADO;
 
 ```
 
+<!-- TOC --><a name="call-fnc_consulta_salario_empregadosql"></a>
 ## Call FNC_Consulta_salario_empregado.sql
 ```sql
 DECLARE
@@ -2465,6 +2653,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="query-sql-com-functionsql"></a>
 ## Query SQL com FUNCTION.sql
 ```sql
 SELECT e.first_name,
@@ -2476,9 +2665,11 @@ SELECT e.first_name,
 
 ```
 
+<!-- TOC --><a name="section-16-managing-procedures-e-functions"></a>
 # Section 16 - Managing procedures e functions
 
 
+<!-- TOC --><a name="1-managing-procedures-e-functionssql"></a>
 ## 1 - Managing procedures e functions.sql
 ```sql
 --
@@ -2570,6 +2761,7 @@ ORDER BY line;
 
 ```
 
+<!-- TOC --><a name="objects-viewssql"></a>
 ## objects-views.sql
 ```sql
 -- Consultando objetos
@@ -2590,9 +2782,11 @@ SELECT *
 
 ```
 
+<!-- TOC --><a name="section-17-managing-dependencies-of-objects"></a>
 # Section 17 - Managing dependencies of objects
 
 
+<!-- TOC --><a name="1-managing-dependencies-of-objetossql"></a>
 ## 1 - Managing dependencies of objetos.sql
 ```sql
 --
@@ -2651,6 +2845,7 @@ WHERE  status = 'INVALID';
 
 ```
 
+<!-- TOC --><a name="2-deptree-e-ideptreesql"></a>
 ## 2 - DEPTREE e IDEPTREE.sql
 ```sql
 --
@@ -2687,9 +2882,11 @@ FROM ideptree;
 
 ```
 
+<!-- TOC --><a name="section-18-packages"></a>
 # Section 18 - Packages
 
 
+<!-- TOC --><a name="1-creating-a-package-specificationsql"></a>
 ## 1 - Creating a package specification.sql
 ```sql
 --
@@ -2730,6 +2927,7 @@ END PCK_EMPREGADOS;
 
 ```
 
+<!-- TOC --><a name="2-creating-o-package-bodysql"></a>
 ## 2 - Creating o package body.sql
 ```sql
 --
@@ -2821,6 +3019,7 @@ IS
 END PCK_EMPREGADOS;
 ```
 
+<!-- TOC --><a name="3-reference-components-of-one-packagesql"></a>
 ## 3 - Reference Components of one package.sql
 ```sql
 --
@@ -2842,6 +3041,7 @@ BEGIN
 END;
 ```
 
+<!-- TOC --><a name="4-procedure-of-one-unique-execution-na-session-debugersql"></a>
 ## 4 - Procedure of one unique execution na session & debuger.sql
 ```sql
 --
@@ -2944,6 +3144,7 @@ BEGIN
 END PCK_EMPREGADOS;
 ```
 
+<!-- TOC --><a name="call-pkg-e-functionsql"></a>
 ## CALL PKG e FUNCTION.sql
 ```sql
 DECLARE
@@ -2959,9 +3160,11 @@ END;
 
 ```
 
+<!-- TOC --><a name="section-19-sys_refcursor"></a>
 # Section 19 - SYS_REFCURSOR
 
 
+<!-- TOC --><a name="1-sys_refcursorsql"></a>
 ## 1 - SYS_REFCURSOR.sql
 ```sql
 --
@@ -3062,9 +3265,11 @@ execute PRC_DISPLAY_EMPOYEES2(100)
 
 ```
 
+<!-- TOC --><a name="section-20-bulk-collect"></a>
 # Section 20 - BULK COLLECT
 
 
+<!-- TOC --><a name="1-associative-arraysql"></a>
 ## 1 - ASSOCIATIVE ARRAY.sql
 ```sql
 --
@@ -3098,6 +3303,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="2-nested-tablesql"></a>
 ## 2 - NESTED TABLE.sql
 ```sql
 --
@@ -3129,6 +3335,7 @@ BEGIN
 END;
 ```
 
+<!-- TOC --><a name="3-varraysql"></a>
 ## 3 - VARRAY.sql
 ```sql
 --
@@ -3160,9 +3367,11 @@ BEGIN
 END;
 ```
 
+<!-- TOC --><a name="section-21-forall-e-limit"></a>
 # Section 21 - FORALL e LIMIT
 
 
+<!-- TOC --><a name="1-forallsql"></a>
 ## 1 - FORALL.sql
 ```sql
 --
@@ -3261,6 +3470,7 @@ FROM employees;
 ROLLBACK;
 ```
 
+<!-- TOC --><a name="2-limitsql"></a>
 ## 2 - LIMIT.sql
 ```sql
 --
@@ -3334,9 +3544,11 @@ ROLLBACK;
 
 ```
 
+<!-- TOC --><a name="section-22-sql-dynamic"></a>
 # Section 22 - SQL Dynamic
 
 
+<!-- TOC --><a name="1-execute-immediatesql"></a>
 ## 1 - EXECUTE IMMEDIATE.sql
 ```sql
 --
@@ -3404,6 +3616,7 @@ exec PRC_FETCH_EMPLOYEES_DYNAMIC(pdepartment_id => 60)
 exec PRC_FETCH_EMPLOYEES_DYNAMIC
 ```
 
+<!-- TOC --><a name="2-execute-immediate-with-bind-variablessql"></a>
 ## 2 - EXECUTE IMMEDIATE with BIND VARIABLES.sql
 ```sql
 --
@@ -3480,6 +3693,7 @@ exec PRC_FETCH_EMPLOYEES_DYNAMIC_BIND(pdepartment_id => 60)
 exec PRC_FETCH_EMPLOYEES_DYNAMIC_BIND;
 ```
 
+<!-- TOC --><a name="invoking-subprogram-from-dynamic-sql-blocksql"></a>
 ## Invoking Subprogram from Dynamic SQL Block.sql
 ```sql
 -- Subprogram that dynamic PL/SQL block invokes:
@@ -3525,9 +3739,11 @@ END;
 
 ```
 
+<!-- TOC --><a name="section-23-dbms_sql"></a>
 # Section 23 - DBMS_SQL
 
 
+<!-- TOC --><a name="1-dbms_sqlsql"></a>
 ## 1 - DBMS_SQL.sql
 ```sql
 --
@@ -3632,9 +3848,11 @@ END;
 
 ```
 
+<!-- TOC --><a name="section-24-cursor-com-sql-dynamic"></a>
 # Section 24 - Cursor com SQL Dynamic
 
 
+<!-- TOC --><a name="1-cursor-explicit-com-sql-dynamicsql"></a>
 ## 1 - Cursor Explicit com SQL Dynamic.sql
 ```sql
 --
@@ -3712,9 +3930,11 @@ exec PRC_FETCH_EMPLOYEES_CURSOR_DYNAMIC(pdepartment_id => 60)
 exec PRC_FETCH_EMPLOYEES_CURSOR_DYNAMIC;
 ```
 
+<!-- TOC --><a name="section-25-dbms_scheduler"></a>
 # Section 25 - DBMS_SCHEDULER
 
 
+<!-- TOC --><a name="1-creating-one-programasql"></a>
 ## 1 - Creating one Programa.sql
 ```sql
 --
@@ -3796,6 +4016,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="2-creating-one-agendasql"></a>
 ## 2 - Creating one Agenda.sql
 ```sql
 --
@@ -3851,6 +4072,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="3-creating-one-jobsql"></a>
 ## 3 - Creating one Job.sql
 ```sql
 --
@@ -3900,9 +4122,11 @@ END;
 
 ```
 
+<!-- TOC --><a name="section-26-utl_file"></a>
 # Section 26 - UTL_FILE
 
 
+<!-- TOC --><a name="1-utl_filesql"></a>
 ## 1 - UTL_FILE.sql
 ```sql
 /* Create a directory reference */
@@ -3976,6 +4200,7 @@ END;
 
 ```
 
+<!-- TOC --><a name="using-a-package-utl_file-to-ler-e-to-record-filessql"></a>
 ## Using a Package UTL_FILE to ler e to record files.sql
 ```sql
 --
@@ -4061,9 +4286,11 @@ END;
 
 ```
 
+<!-- TOC --><a name="section-27-dbms_flashback"></a>
 # Section 27 - DBMS_FLASHBACK
 
 
+<!-- TOC --><a name="flashback-querysql"></a>
 ## FLASHBACK query.sql
 ```sql
 -- Query the table
